@@ -21,12 +21,19 @@ function init() {
     day.innerHTML = currentDate.getDate();
     year.innerHTML = currentDate.getFullYear();
 
-    //generate time
+    //adjust current time
+    if (currentDate.getHours() >= 0 && currentDate.getHours() < 10) {
+      hour.innerHTML = `0${currentDate.getHours()}`;
+    } else {
+      hour.innerHTML = currentDate.getHours();
+    }
 
-    hour.innerHTML = currentDate.getHours();
-    minute.innerHTML = currentDate.getMinutes();
+    if (currentDate.getMinutes() >= 0 && currentDate.getMinutes() < 10) {
+      minute.innerHTML = `0${currentDate.getMinutes()}`;
+    } else {
+      minute.innerHTML = currentDate.getMinutes();
+    }
 
-    //adjust second
     if (currentDate.getSeconds() >= 0 && currentDate.getSeconds() < 10) {
       second.innerHTML = `0${currentDate.getSeconds()}`;
     } else {
