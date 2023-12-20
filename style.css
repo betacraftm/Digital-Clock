@@ -8,7 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,6 +17,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  user-select: none;
 }
 
 .container {
@@ -35,8 +36,16 @@ body {
 }
 
 .current-time {
-  text-align: center;
+  /* position: absolute; */
   font-size: 4rem;
   letter-spacing: 2.5px;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* .hour ,.minute,.second {
+  text-align: center;
+  width: 108px;
+} */
