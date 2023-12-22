@@ -9,3 +9,15 @@ window.addEventListener("DOMContentLoaded", () => {
     currentTime.innerHTML = dayjs().format("HH:mm:ss");
   }
 });
+
+// BUTTON INTERACTIVE
+const timezoneOverlay = document.querySelector(".timezone-overlay");
+const timezoneBtn = document.querySelector(".btn");
+const closeBtn = document.querySelector(".close-btn");
+timezoneBtn.addEventListener("click", () => {
+  timezoneOverlay.classList.add("show");
+});
+closeBtn.addEventListener("click", () => {
+  timezoneOverlay.classList.remove("show");
+});
+
